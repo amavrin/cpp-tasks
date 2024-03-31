@@ -5,9 +5,9 @@
 int count_equals(vector<vector<int>> v, int x)
 {
 	int number = 0;
-	for (int i = 0; i < v.size(); i++)
+	for (const auto vec : v)
 	{
-		number = (v.begin(), v.end(), x);
+		number += count(vec.begin(), vec.end(), x);
 	}
 	return number;
 }

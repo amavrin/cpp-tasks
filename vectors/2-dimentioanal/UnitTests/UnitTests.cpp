@@ -27,7 +27,7 @@ namespace UnitTests
 				{3, 0, 4, 3, 0, 0},
 				{0, 0, 0, 0, 4, -1}
 			};
-			Assert::IsTrue(count_equals(v, -1) == -1);
+			Assert::IsTrue(count_equals(v, -1) == 1);
 		}
 		TEST_METHOD(Test2DimZero)
 		{
@@ -37,7 +37,7 @@ namespace UnitTests
 				{3, 0, 4, 3, 0, 0},
 				{0, 0, 0, 0, 4, -1}
 			};
-			Assert::IsTrue(count_equals(v, 0) == 0);
+			Assert::IsTrue(count_equals(v, 0) == 8);
 		}
 	};
 }
