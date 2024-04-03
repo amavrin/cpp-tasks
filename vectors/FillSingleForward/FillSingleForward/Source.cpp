@@ -10,19 +10,19 @@
 
 bool fill_forward(vector<unsigned int>& v)
 {
-	bool found_non_zero = false; // Флаг, указывающий, была ли найдена ненулевая цифра
-	size_t non_zero_index = 0; // Переменная для хранения индекса ненулевого элемента
-	
+	bool found_non_zero = false; // Flag indicating whether a non-zero digit has been found
+	size_t non_zero_index = 0; // Variable for storing the index of a non-zero element
+
 	for (size_t i = 0; i < v.size(); i++)
 	{
 		if (v[i] != 0)
 		{
-			// Если уже была найдена ненулевая цифра, вектор некорректен
+			// If a non-zero digit has already been found, the vector is incorrect
 			if (found_non_zero)
 			{
 				return false;
 			}
-			// Сохраняем индекс ненулевого элемента
+			// Saving the index of a non-zero element
 			non_zero_index = i;
 			found_non_zero = true;
 		}
