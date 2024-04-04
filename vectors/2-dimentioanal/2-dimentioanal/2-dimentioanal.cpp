@@ -4,7 +4,8 @@
 
 int main()
 {
-	vector<vector<int>> v{
+	vector<vector<int>> v
+	{
 		{1, 4, 3, 4, 0, -4},
 		{3, 0, 4, 3, 0, 0},
 		{0, 0, 0, 0, 4, -1}
