@@ -8,9 +8,10 @@ int main()
     int out[]{ 1,2,0,4,5,0,7,8,0 };
     size_t len = sizeof(in) / sizeof(int);
 
-    // brush(in, ...);
+    brush(in, len, 3);
 
-    for (size_t i = 0; i < len; i++) {
+    for (size_t i = 0; i < len; i++) 
+    {
         assert(in[i] == out[i]);
     }
     
