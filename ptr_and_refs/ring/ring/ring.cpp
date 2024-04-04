@@ -8,16 +8,17 @@ int main()
 {
 	int a = 1, b = 2, c = 3;
 
-	// ring_ptr(...);
+	ring_ptr(&a, &b, &c);
 
 	assert(a == 2);
 	assert(b == 3);
 	assert(c == 1);
 
-	// ring_ref(...);
+	ring_ref(a, b, c);
 
 	assert(a == 3);
 	assert(b == 1);
 	assert(c == 2);
+
 	std::cout << "correct" << std::endl;
 }
