@@ -1,3 +1,6 @@
 #pragma once
+#include <vector>
 
-// void brush(...);
+using namespace std;
+
+void brush(int* in, size_t len, int N);
