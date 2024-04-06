@@ -5,5 +5,15 @@
 // function replace() returns the number of replacements made
 int replace_strings(vector<string>& data, string from, string to)
 {
-	return 0;
+    int replacements = 0; // Счетчик замен
+    for (auto& str : data)
+    {
+        if (str == from)
+        {
+            str = to;
+            replacements++;
+        }
+
+    }
+    return replacements; // Возвращаем количество замен
 }
