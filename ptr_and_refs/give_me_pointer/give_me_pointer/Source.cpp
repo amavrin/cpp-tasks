@@ -5,5 +5,12 @@
 // if no such element is found in first count elements, return nullptr
 int* find_elem(int array[], size_t count, int value)
 {
-	return nullptr;
+    for (size_t i = 0; i < count; ++i)
+    {
+        if (array[i] == value)
+        {
+            return &array[i];
+        }
+    }
+    return nullptr;
 }
