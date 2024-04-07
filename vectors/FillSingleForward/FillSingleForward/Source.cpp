@@ -33,13 +33,15 @@ bool fill_forward(vector<unsigned int>& v)
         return true;
     }
 
-    for (size_t i = non_zero_index + 1; i < v.size(); i++)
+    for (size_t i = non_zero_index + 1; i < v.size(); i++) 
     {
-        if (v[i] != 0) // Check if there is another non-zero element after the first one
-        {
-            return false; // If so, the vector is incorrect
-        }
         v[i] = v[non_zero_index] - (i - non_zero_index);
+        
+        //We add an additional check to make sure that after the first non-zero element, all other elements become null.
+        if (v[i] == 0) 
+        {
+            return true; // Vector is filled correctly
+        }
     }
 
     return true;

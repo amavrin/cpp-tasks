@@ -1,5 +1,6 @@
 ﻿#include "pch.h"
 #include "CppUnitTest.h"
+#include <iostream>
 #include "..\FillSingleForward\Header.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
@@ -27,11 +28,12 @@ namespace UnitTests
 		}
 		TEST_METHOD(TestFillSingleFor_SingleNonZero)
 		{
-			vector<unsigned int> v0{ 0, 0, 0, 4, 0, 0, 0, 0};
-			vector<unsigned int> expected{ 0, 0, 0, 4, 3, 2, 1, 0};
+			vector<unsigned int> v0{ 0,0,0,4,0,0,0,0,0 };
+			vector<unsigned int> expected{ 0, 0, 0, 4, 3, 2, 1, 0, 0 };
 
 			bool res = fill_forward(v0);
 
+			cout << res << endl;
 			Assert::IsTrue(v0 == expected);
 			Assert::IsTrue(res);
 		}
