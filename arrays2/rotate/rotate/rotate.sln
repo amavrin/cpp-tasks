@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.34601.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rotate", "rotate\rotate.vcxproj", "{89EBDE7D-B8AA-41D8-8F00-4F0CB902D4EC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTests", "UnitTests\UnitTests.vcxproj", "{0600301D-786F-4557-8881-4A4F32653710}"
+	ProjectSection(ProjectDependencies) = postProject
+		{89EBDE7D-B8AA-41D8-8F00-4F0CB902D4EC} = {89EBDE7D-B8AA-41D8-8F00-4F0CB902D4EC}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +26,14 @@ Global
 		{89EBDE7D-B8AA-41D8-8F00-4F0CB902D4EC}.Release|x64.Build.0 = Release|x64
 		{89EBDE7D-B8AA-41D8-8F00-4F0CB902D4EC}.Release|x86.ActiveCfg = Release|Win32
 		{89EBDE7D-B8AA-41D8-8F00-4F0CB902D4EC}.Release|x86.Build.0 = Release|Win32
+		{0600301D-786F-4557-8881-4A4F32653710}.Debug|x64.ActiveCfg = Debug|x64
+		{0600301D-786F-4557-8881-4A4F32653710}.Debug|x64.Build.0 = Debug|x64
+		{0600301D-786F-4557-8881-4A4F32653710}.Debug|x86.ActiveCfg = Debug|Win32
+		{0600301D-786F-4557-8881-4A4F32653710}.Debug|x86.Build.0 = Debug|Win32
+		{0600301D-786F-4557-8881-4A4F32653710}.Release|x64.ActiveCfg = Release|x64
+		{0600301D-786F-4557-8881-4A4F32653710}.Release|x64.Build.0 = Release|x64
+		{0600301D-786F-4557-8881-4A4F32653710}.Release|x86.ActiveCfg = Release|Win32
+		{0600301D-786F-4557-8881-4A4F32653710}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
