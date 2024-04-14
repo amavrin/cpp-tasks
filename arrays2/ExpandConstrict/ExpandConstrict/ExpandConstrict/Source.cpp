@@ -2,26 +2,77 @@
 
 size_t get_free_space(uint arr[], size_t size)
 {
-	return 0;
+	size_t free_space = 0;
+	for (size_t i = size - 1; arr[i] == 0; i--)
+	{
+		free_space++;
+	}
+	return free_space;
 }
 
 bool insert(uint arr[], size_t size, uint elem)
 {
+	size_t free_space = get_free_space(arr, size);
+	if (free_space == 0)
+	{
+		return false; // No free space
+	}
+
+	size_t insert_pos = 0;
+	while (insert_pos < size && arr[insert_pos] > elem)
+	{
+		insert_pos++;
+	}
+
+	for (size_t i = size - 1; i > 0; i--)
+	{
+		arr[i] = arr[i - 1];
+	}
+
+	arr[insert_pos] = elem;
+
 	return true;
 }
 
 bool expand(uint arr[], size_t size, size_t starting_pos)
 {
+	size_t free_space = get_free_space(arr, size);
+	if (free_space == 0)
+	{
+		return false; 
+	}
+
+	if (starting_pos < 0 || starting_pos >= size)
+	{
+		return false; // Invalid starting position
+	}
+
+	for (size_t i = size - 1; i > starting_pos; i--)
+	{
+		arr[i] = arr[i - 1];
+	}
+
 	return true;
 }
 
 void constrict(uint arr[], size_t size)
 {
+	for (size_t i = 0; i < size - 1; i++)
+	{
+		arr[i] = arr[i + 1];
+	}
+	arr[size - 1] = 0; 
 }
 
 uint pop_head(uint arr[], size_t size)
 {
-	return 0;
+	if (size == 0)
+	{
+		return 0; // Handle empty array
+	}
+	uint popped_element = arr[0];
+	constrict(arr, size);
+	return popped_element;
 }
 
 // this is auxiliary test function comparing two arrays

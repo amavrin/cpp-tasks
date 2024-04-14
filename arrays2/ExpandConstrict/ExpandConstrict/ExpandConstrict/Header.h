@@ -2,6 +2,8 @@
 
 typedef unsigned int uint;
 
+const int ASIZE = 6;
+
 // Let suppose we have an ordered vector of unsigned ints of some size.
 // The value order is descending, for example, [10, 4, 2, 1, 0, 0, ...].
 // Positions at the end of the array containing zeros are considered "empty".
@@ -23,7 +25,7 @@ bool insert(uint array[], size_t array_size, uint new_element);
 // It's worth having some additional functions and use them as auxiliary functions:
 
 // expand() shifts elements of the vector to the end, starting with specified position.
-// If there is no room in the vector, it rerurns false.
+// If there is no room in the vector, it returns false.
 // If starting position is invalid (i.e. less than zero or greater than array size) expand() also returns false.
 // Otherwize expand() returns true.
 // Example: {4, 3, 1, 0, 0}, expand at 1 => {4, 3, 3, 1, 0}
