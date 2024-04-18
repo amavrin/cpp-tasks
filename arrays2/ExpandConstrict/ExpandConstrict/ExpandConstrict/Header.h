@@ -2,8 +2,6 @@
 
 typedef unsigned int uint;
 
-const int ASIZE = 6;
-
 // Let suppose we have an ordered vector of unsigned ints of some size.
 // The value order is descending, for example, [10, 4, 2, 1, 0, 0, ...].
 // Positions at the end of the array containing zeros are considered "empty".

@@ -18,6 +18,7 @@ void print_array(uint arr[], size_t size)
 
 int main()
 {
+    const int ASIZE = 6;
     uint array[ASIZE]{ 10, 4, 2, 1, 0, 0 };
 
     // print_array(array, ASIZE); // prints [10, 4, 2, 1, 0, 0]

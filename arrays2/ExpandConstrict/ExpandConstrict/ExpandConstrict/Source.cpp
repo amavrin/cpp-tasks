@@ -3,9 +3,13 @@
 size_t get_free_space(uint arr[], size_t size)
 {
 	size_t free_space = 0;
-	for (size_t i = size - 1; arr[i] == 0; i--)
+	for (size_t i = 0; i < size; i++)
 	{
-		free_space++;
+		if (arr[i] == 0)
+		{
+			free_space++;
+		}
+		
 	}
 	return free_space;
 }
@@ -24,9 +28,9 @@ bool insert(uint arr[], size_t size, uint elem)
 		insert_pos++;
 	}
 
-	for (size_t i = size - 1; i > 0; i--)
+	if (!expand(arr, size, insert_pos))
 	{
-		arr[i] = arr[i - 1];
+		return false; // Expand failed
 	}
 
 	arr[insert_pos] = elem;
