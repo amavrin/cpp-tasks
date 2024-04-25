@@ -26,34 +26,38 @@ namespace UnitTests
 		TEST_METHOD(TestExpandConstrict_Expand_Correct)
 		{
 			uint array[ASIZE]{ 10, 4, 2, 1, 0, 0 };
-			expand(array, ASIZE, 2);
+			bool res = expand(array, ASIZE, 2);
 			uint arr[]{ 10, 4, 2, 2, 1, 0 };
 
 			Assert::IsTrue(equals(array, arr, ASIZE));
+			Assert::IsTrue(res);
 		}
 		TEST_METHOD(TestExpandConstrict_Expand_NoZero)
 		{
 			uint array[ASIZE]{ 10, 5, 3, 2, 2, 1 };
-			expand(array, ASIZE, 4);
+			bool res = expand(array, ASIZE, 4);
 			uint arr[]{ 10, 5, 4, 3, 2, 2, 1};
 
 			Assert::IsTrue((array, arr, ASIZE));
+			Assert::IsFalse(res);
 		}
 		TEST_METHOD(TestExpandConstrict_Insert_Correct)
 		{
 			uint array[ASIZE]{ 10, 4, 2, 1, 0, 0 };
-			insert(array, ASIZE, 7);
+			bool res = insert(array, ASIZE, 7);
 			uint arr[]{ 10, 7, 4, 2, 1, 0 };
 
 			Assert::IsTrue(equals(array, arr, ASIZE));
+			Assert::IsTrue(res);
 		}
 		TEST_METHOD(TestExpandConstrict_Insert_NoZero)
 		{
 			uint array[ASIZE]{ 10, 6, 5, 3, 2, 1 };
-			insert(array, ASIZE, 6);
+			bool res = insert(array, ASIZE, 7);
 			uint arr[]{ 10, 6, 5, 3, 2, 1 };
 
-			Assert::IsTrue(equals(array, arr, ASIZE));
+			Assert::IsTrue((array, arr, ASIZE));
+			Assert::IsFalse(res);
 		}
 		TEST_METHOD(TestExpandConstrict_PopHead_Correct)
 		{
