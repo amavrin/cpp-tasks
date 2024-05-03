@@ -16,8 +16,6 @@ void print_array(uint arr[], size_t size)
     std::cout << "]" << std::endl;
 }
 
-
-
 int main()
 {
     const int ASIZE = 6;
