@@ -56,7 +56,6 @@ namespace UnitTests
 			bool res = insert(array, ASIZE, 7);
 			uint arr[]{ 10, 6, 5, 3, 2, 1 };
 
-			Assert::IsTrue((array, arr, ASIZE));
 			Assert::IsFalse(res);
 		}
 		TEST_METHOD(TestExpandConstrict_PopHead_Correct)
